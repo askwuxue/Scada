@@ -32,7 +32,7 @@
   },
   "[html]": {
     // 对html文件，使用 vscode.html-language-features(vscode内置规则) 进行格式化,不要使用 prettier
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
