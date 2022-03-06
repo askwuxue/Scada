@@ -4,6 +4,8 @@
   "description": "supervisory control and data acquisition",
   "main": "index.js",
   "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
     "prettier": "prettier --write .",
     "lint": "eslint --ext .js, src",
     "prepare": "husky install",
@@ -28,7 +30,12 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify": "^6.0.4"
   },
   "config": {
     "commitizen": {
