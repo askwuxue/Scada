@@ -1,0 +1,194 @@
+{
+  // vscode默认启用了根据文件类型自动设置tabsize的选项
+  "editor.detectIndentation": false,
+  //黄色波浪线
+  "eslint.enable": true,
+  // 重新设定tabsize
+  "editor.tabSize": 2,
+  "editor.fontSize": 20,
+  // #每次保存的时候自动格式化
+  "editor.formatOnSave": true,
+  // #每次保存的时候将代码按eslint格式进行修复 ,"eslint.autoFixOnSave": true 这个已经过时了
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.snippetSuggestions": "top", // 代码提示。许多插件都有代码提示，代码缩写提示优先显示在最上方
+  // 粘贴后的内容, 是否自动格式化
+  "editor.formatOnPaste": false,
+  "eslint.format.enable": true,
+  "files.autoSave": "afterDelay", //超过屏幕视图换行
+  "eslint.validate": [
+    // eslint规则对以下几种后缀文件生效. 默认为["javascript", "javascriptreact"]
+    "javascript",
+    "javascriptreact",
+    "html",
+    "typescript",
+    "typescriptreact"
+  ],
+  // 使能每一种语言默认格式化规则
+  "[json]": {
+    // 对json文件，使用 JSON语言功能 进行格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    // 对html文件，使用 vscode.html-language-features(vscode内置规则) 进行格式化,不要使用 prettier
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    // 可选值： eslint ："dbaeumer.vscode-eslint"  vetur: "octref.vetur"   prettier: "esbenp.prettier-vscode"
+    // 对 vue 文件，使用 prettier（格式化规则） + eslint（校验） 进行格式化，也可以选择 vetur 插件，或者单独选择prettier不加eslint
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "[typescript]": {
+    // 对ts文件进行格式化时，使用哪一种风格 (此处使用的是vscode中安装的ts插件默认风格进行格式化)
+    // "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "search.exclude": {
+    // VScode进行文件搜索时，不搜索这些区域。
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/.idea": true,
+    "**/.svn": true,
+    "**/.vscode": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/tmp": true,
+    "**/yarn.lock": true,
+    "**/assets": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  },
+  // 配置文件关联
+  "files.associations": {
+    // 比如小程序中的 .wxss 这种文件，会把它作为css文件来处理，提供对应的css的语法提示，css的格式化等。
+    "*.wxss": "css",
+    "*.cjson": "jsonc",
+    "*.wxs": "javascript",
+    "*.ts": "typescript",
+    "*.vue": "vue",
+    "*.dart": "dart"
+  },
+  /*  prettier的配置 */
+  "prettier.printWidth": 100, // 超过最大值换行
+  "prettier.tabWidth": 2, // 缩进字节数
+  "prettier.useTabs": false, // 缩进不使用tab，使用空格
+  "prettier.semi": true, // 句尾添加分号
+  "prettier.singleQuote": false, // 使用单引号代替双引号
+  "prettier.proseWrap": "preserve", // 默认值。因为使用了一些折行敏感型的渲染器（如GitHub comment）而按照markdown文本样式进行折行
+  "prettier.arrowParens": "avoid", //  (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号
+  "prettier.bracketSpacing": true, // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
+  "prettier.endOfLine": "auto", // 结尾是 \n \r \n\r auto
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.ignorePath": ".prettierignore", // 不使用prettier格式化的文件填写在项目的.prettierignore文件中
+  "prettier.jsxBracketSameLine": false, // 在jsx中把'>' 是否单独放一行
+  "prettier.jsxSingleQuote": false, // 在jsx中使用单引号代替双引号
+  "prettier.parser": "babylon", // 格式化的解析器，默认是babylon
+  "prettier.requireConfig": false, // Require a 'prettierconfig' to format prettier
+  "prettier.stylelintIntegration": false, //不让prettier使用stylelint的代码格式进行校验
+  "prettier.trailingComma": "es5", // 在对象或数组最后一个元素后面是否加逗号（在ES5中加尾逗号）
+  "prettier.tslintIntegration": false, // 不让prettier使用tslint的代码格式进行校验
+  //  #让prettier使用eslint的代码格式进行校验
+  "prettier.eslintIntegration": true,
+  //  #让函数(名)和后面的括号之间加个空格
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  // #这个按用户自身习惯选择
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  // #让vue中的js按编辑器自带的ts格式进行格式化
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "auto"
+      // #vue组件中html代码格式化样式 标签换行force-aligned  不换行auto
+    }
+  },
+  "emmet.includeLanguages": {
+    "wxml": "html"
+  },
+  "minapp-vscode.disableAutoConfig": true,
+  "explorer.confirmDelete": false,
+  "vetur.format.options.tabSize": 2,
+  "git.autofetch": true, // 在push代码时，是否先自动从远端拉取代码
+  "gitlens.advanced.messages": {
+    // 配置gitlen中git提交历史记录的信息显示情况
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false
+  },
+  // 格式化stylus, 需安装Manta's Stylus Supremacy插件
+  "stylusSupremacy.insertColons": true, // 是否插入冒号
+  "stylusSupremacy.insertSemicolons": true, // 是否插入分好
+  "stylusSupremacy.insertBraces": true, // 是否插入大括号
+  "stylusSupremacy.insertNewLineAroundImports": false, // import之后是否换行
+  "stylusSupremacy.insertNewLineAroundBlocks": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 两个选择器中是否换行
+  "easysass.compileAfterSave": true,
+  "easysass.excludeRegex": "",
+  "easysass.formats": [
+    {
+      "format": "expanded",
+      "extension": ".css"
+    },
+    {
+      "format": "compressed",
+      "extension": ".min.css"
+    }
+  ],
+  "easysass.targetDir": "./",
+  "debug.openDebug": "openOnDebugBreak", // 断点调试时，遇到断点，自动显示调试视图。（全局，不可为每种语言单独配置）
+  "terminal.integrated.rendererType": "dom",
+  //"workbench.colorTheme": "Solarized Light",
+  "git.suggestSmartCommit": false,
+  "settingsSync.ignoredExtensions": [],
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  //html标签属性不换行 end
+  "editor.wordWrap": "on",
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "plist"
+  ],
+  "workbench.activityBar.visible": true,
+  "workbench.colorCustomizations": {}
+}

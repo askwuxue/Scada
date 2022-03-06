@@ -1,0 +1,38 @@
+{
+  "name": "scada",
+  "version": "1.0.0",
+  "description": "supervisory control and data acquisition",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write .",
+    "lint": "eslint --ext .ts, src",
+    "prepare": "husky install",
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askwuxue/Scada.git"
+  },
+  "author": "askwuxue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/askwuxue/Scada/issues"
+  },
+  "homepage": "https://github.com/askwuxue/Scada#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "prettier": "2.5.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
