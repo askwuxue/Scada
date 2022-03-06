@@ -1,4 +1,4 @@
-import { config } from './config';
+import config from './config';
 
 // 当浏览器窗口关闭或者刷新时，会触发beforeunload事件。当前页面不会直接关闭，
 // 可以点击确定按钮关闭或刷新，也可以取消关闭或刷新。
@@ -11,7 +11,7 @@ export function onHidden(callback) {
 }
 
 // 生成唯一的id
-export default function generateUniqueID() {
+export function generateUniqueID() {
   return `v2-${Date.now()}-${Math.floor(Math.random() * (9e12 - 1)) + 1e12}`;
 }
 
@@ -33,3 +33,10 @@ export const sendData = isSupportSendBeacon()
   : reportFromXHR;
 
 export const hiddenEvent = [onBeforeunload, onHidden];
+
+// 获取页面url
+export function getPageURL() {
+  window.location.href;
+}
+
+export function deepCopy() {}
