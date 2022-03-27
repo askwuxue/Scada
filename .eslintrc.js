@@ -5,7 +5,9 @@ module.exports = {
     node: true,
     es6: true,
   },
-  extends: ['eslint:recommended'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   parserOptions: {
     sourceType: 'module', // 模块为 ECMAScript 模块
     ecmaVersion: 2020,
